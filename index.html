@@ -1,33 +1,28 @@
-
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>متجري</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الجوهرة</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>لوحة التحكم</h1>
-    
-    <div id="storeSetup">
-      <input type="text" id="storeName" placeholder="اسم المتجر">
-      <input type="text" id="storePhone" placeholder="رقم واتساب (05xxxxxxx)">
-      <button onclick="createStore()">إنشاء المتجر</button>
-    </div>
+  <header>
+    <h1>🌟 الجوهرة 🌟</h1>
+    <p>متجرك الإلكتروني الخاص بأناقة</p>
+  </header>
 
-    <div id="dashboard" style="display:none;">
-      <h2 id="storeTitle"></h2>
-      <p>رقم التواصل: <span id="storePhoneDisplay"></span></p>
-      <input type="text" id="productName" placeholder="اسم المنتج">
-      <input type="number" id="productPrice" placeholder="سعر المنتج">
-      <button onclick="addProduct()">إضافة المنتج</button>
+  <main>
+    <section class="intro">
+      <h2>مرحبًا بك!</h2>
+      <p>ابدأ التسوق الآن أو أنشئ متجرك الخاص بكل سهولة.</p>
+      <a href="https://wa.me/966XXXXXXXXX" class="whatsapp">💬 تواصل عبر واتساب</a>
+    </section>
+  </main>
 
-      <ul id="productList"></ul>
-      <button onclick="resetStore()" style="background:red;">إعادة تعيين المتجر</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <footer>
+    <p>© 2025 الجوهرة - جميع الحقوق محفوظة</p>
+  </footer>
 </body>
 </html>
