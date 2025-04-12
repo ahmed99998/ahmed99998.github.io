@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>متجري</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>لوحة التحكم</h1>
+    
+    <div id="storeSetup">
+      <input type="text" id="storeName" placeholder="اسم المتجر">
+      <input type="text" id="storePhone" placeholder="رقم واتساب (05xxxxxxx)">
+      <button onclick="createStore()">إنشاء المتجر</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <h2 id="storeTitle"></h2>
+      <p>رقم التواصل: <span id="storePhoneDisplay"></span></p>
+      <input type="text" id="productName" placeholder="اسم المنتج">
+      <input type="number" id="productPrice" placeholder="سعر المنتج">
+      <button onclick="addProduct()">إضافة المنتج</button>
+
+      <ul id="productList"></ul>
+      <button onclick="resetStore()" style="background:red;">إعادة تعيين المتجر</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
