@@ -52,6 +52,5 @@ document.getElementById('product-submit').addEventListener('click', function(eve
 
   reader.readAsDataURL(productImage);
 });
-
-// رابط الواتساب
-document.getElementById('whatsapp-link').href = 'https://wa.me/96212345678'; // استبدل برقمك
+// رابط الواتساب مع الرقم العراقي
+document.getElementById('whatsapp-link').href = 'https://wa.me/964770xxxxxxx';  // استبدل الرقم هنا
