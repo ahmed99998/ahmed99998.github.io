@@ -67,6 +67,59 @@ main .intro {
 }
 
 footer {
+  /* الخط العام */
+body {
+  font-family: 'Tahoma', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* خلفية متدرجة */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffda77;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #ffffff22;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffffff44;
+}
+
   margin-top: 60px;
   padding: 20px;
   background-color: #f0e6d6;
