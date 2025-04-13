@@ -1,66 +1,57 @@
-/* تنسيق عام للصفحة */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  direction: rtl; /* دعم النصوص من اليمين لليسار */
-}
+// إضافة المتجر
+document.getElementById('store-submit').addEventListener('click', function(event) {
+  event.preventDefault();
 
-.container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  text-align: center;
-}
+  const storeName = document.getElementById('store-name').value;
+  const storeLogo = document.getElementById('store-logo').files[0];
 
-h1 {
-  color: #007BFF;
-}
+  if (!storeName || !storeLogo) {
+    alert("يجب إدخال اسم المتجر وشعار المتجر.");
+    return;
+  }
 
-label {
-  display: block;
-  margin-top: 10px;
-}
+  const reader = new FileReader();
+  reader.onloadend = function() {
+    document.getElementById('store-name-display').textContent = storeName;
+    document.getElementById('store-logo-display').src = reader.result;
 
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+    document.getElementById('store-form').style.display = 'none';
+    document.getElementById('product-form').style.display = 'block';
+    document.getElementById('store-display').style.display = 'block';
+  };
 
-button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+  reader.readAsDataURL(storeLogo);
+});
 
-button:hover {
-  background-color: #0056b3;
-}
+// إضافة المنتج
+document.getElementById('product-submit').addEventListener('click', function(event) {
+  event.preventDefault();
 
-#product-display {
-  margin-top: 20px;
-}
+  const productName = document.getElementById('product-name').value;
+  const productPrice = document.getElementById('product-price').value;
+  const productDescription = document.getElementById('product-description').value;
+  const productImage = document.getElementById('product-image').files[0];
 
-#product-display img {
-  max-width: 100px;
-  margin-top: 10px;
-}
+  if (!productName || !productPrice || !productDescription || !productImage) {
+    alert("يجب إدخال جميع بيانات المنتج.");
+    return;
+  }
 
-#whatsapp-link button {
-  background-color: #25d366;
-}
+  const reader = new FileReader();
+  reader.onloadend = function() {
+    const productHtml = `
+      <div class="product">
+        <h4>${productName}</h4>
+        <p>السعر: ${productPrice} ريال</p>
+        <p>${productDescription}</p>
+        <img src="${reader.result}" alt="صورة المنتج" />
+      </div>
+    `;
+    document.getElementById('product-display').innerHTML += productHtml;
+  };
 
-#whatsapp-link button:hover {
-  background-color: #128c7e;
-}
+  reader.readAsDataURL(productImage);
+});
+
+// رابط الواتساب
+document.getElementById('whatsapp-link').href = 'https://wa.me/96212345678'; // استبدل برقمك
