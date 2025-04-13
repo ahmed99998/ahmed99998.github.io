@@ -42,7 +42,7 @@ document.getElementById('product-submit').addEventListener('click', function(eve
     const productHtml = `
       <div class="product">
         <h4>${productName}</h4>
-        <p>السعر: ${productPrice} ريال</p>
+        <p>السعر: ${productPrice} دينار عراقي</p>
         <p>${productDescription}</p>
         <img src="${reader.result}" alt="صورة المنتج" />
       </div>
@@ -53,4 +53,4 @@ document.getElementById('product-submit').addEventListener('click', function(eve
   reader.readAsDataURL(productImage);
 });
 // رابط الواتساب مع الرقم العراقي
-document.getElementById('whatsapp-link').href = 'https://wa.me/964770xxxxxxx';  // استبدل الرقم هنا
+document.getElementById('whatsapp-link').href = 'https://wa.me/96477013914059';  // استبدل الرقم هنا
