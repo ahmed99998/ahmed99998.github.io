@@ -1,80 +1,39 @@
-
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>متجري</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إضافة منتج</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>لوحة التحكم</h1>
-    
-    <div id="storeSetup">
-      <input type="text" id="storeName" placeholder="اسم المتجر">
-      <input type="text" id="storePhone" placeholder="رقم واتساب (05xxxxxxx)">
-      <button onclick="createStore()">إنشاء المتجر</button>
-    </div>
+    <h1>إضافة منتج جديد</h1>
+    <form id="product-form">
+      <label for="product-name">اسم المنتج:</label>
+      <input type="text" id="product-name" required />
 
-    <div id="dashboard" style="display:none;">
-      <h2 id="storeTitle"></h2>
-      <p>رقم التواصل: <span id="storePhoneDisplay"></span></p>
-      <input type="text" id="productName" placeholder="اسم المنتج">
-      <input type="number" id="productPrice" placeholder="سعر المنتج">
-      <button onclick="addProduct()">إضافة المنتج</button>
+      <label for="product-price">سعر المنتج:</label>
+      <input type="number" id="product-price" required />
 
-      <ul id="productList"></ul>
-      <button onclick="resetStore()" style="background:red;">إعادة تعيين المتجر</button>
+      <label for="product-description">وصف المنتج:</label>
+      <textarea id="product-description" required></textarea>
+
+      <label for="product-image">صورة المنتج:</label>
+      <input type="file" id="product-image" accept="image/*" required />
+
+      <button type="submit">إضافة المنتج</button>
+    </form>
+
+    <div id="product-display" style="display: none;">
+      <h2>المنتج المضاف</h2>
+      <p><strong>اسم المنتج:</strong> <span id="display-name"></span></p>
+      <p><strong>سعر المنتج:</strong> <span id="display-price"></span></p>
+      <p><strong>وصف المنتج:</strong> <span id="display-description"></span></p>
+      <img id="display-image" src="" alt="صورة المنتج" />
     </div>
   </div>
 
   <script src="script.js"></script>
-</body>
-</html>
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الجوهرة</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>🌟 الجوهرة 🌟</h1>
-    <p>متجرك الإلكتروني الخاص بأناقة</p>
-  </header>
-
-  <main>
-    <section class="intro">
-      <h2>مرحبًا بك!</h2>
-      <p>ابدأ التسوق الآن أو أنشئ متجرك الخاص بكل سهولة.</p>
-      <a href="https://wa.me/966XXXXXXXXX" class="whatsapp">💬 تواصل عبر واتساب</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 الجوهرة - جميع الحقوق محفوظة</p>
-  </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>جوهرتي للتسوق</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1 class="logo">💎 جوهرتي</h1>
-    <p class="subtitle">منصتك الخاصة لإنشاء متجرك الإلكتروني بكل سهولة</p>
-    <div class="buttons">
-      <a href="#" class="btn">تسجيل الدخول</a>
-      <a href="#" class="btn">إنشاء متجر</a>
-    </div>
-  </div>
 </body>
 </html>
