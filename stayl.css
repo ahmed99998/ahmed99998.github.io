@@ -1,127 +1,66 @@
+/* تنسيق عام للصفحة */
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  direction: rtl;
-  text-align: center;
-}
-
-.container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  background: white;
-  b
-  ox-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-top: 50px;
-  border-radius: 10px;
-}
-
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: teal;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-/* style.css */
-body {
-  font-family: 'Cairo', sans-serif;
-  background: #fdf6ec;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
   color: #333;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-header {
-  background-color: #d4af37;
-  padding: 30px 10px;
-  color: white;
-}
-
-header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-main .intro {
-  margin: 40px auto;
-  max-width: 500px;
-}
-
-.whatsapp {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #25d366;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-footer {
-  /* الخط العام */
-body {
-  font-family: 'Tahoma', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* خلفية متدرجة */
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  margin: 0;
+  direction: rtl; /* دعم النصوص من اليمين لليسار */
 }
 
 .container {
-  max-width: 500px;
+  background: white;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
 }
 
-.logo {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: #ffda77;
+h1 {
+  color: #007BFF;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+label {
+  display: block;
+  margin-top: 10px;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.btn {
-  background-color: #ffffff22;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: 0.3s;
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #ffffff44;
+button:hover {
+  background-color: #0056b3;
 }
 
-  margin-top: 60px;
-  padding: 20px;
-  background-color: #f0e6d6;
-  font-size: 0.9em;
+#product-display {
+  margin-top: 20px;
+}
+
+#product-display img {
+  max-width: 100px;
+  margin-top: 10px;
+}
+
+#whatsapp-link button {
+  background-color: #25d366;
+}
+
+#whatsapp-link button:hover {
+  background-color: #128c7e;
 }
