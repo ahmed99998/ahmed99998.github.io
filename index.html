@@ -3,34 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>إضافة منتج</title>
+  <title>متجرك للتسوق</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>إضافة منتج جديد</h1>
-    <form id="product-form">
+    <h1>إضافة متجر ومنتجات</h1>
+
+    <!-- نموذج إضافة المتجر -->
+    <div id="store-form">
+      <h2>إضافة المتجر</h2>
+      <label for="store-name">اسم المتجر:</label>
+      <input type="text" id="store-name" placeholder="أدخل اسم المتجر" required />
+      
+      <label for="store-logo">شعار المتجر:</label>
+      <input type="file" id="store-logo" accept="image/*" required />
+
+      <button id="store-submit">إضافة المتجر</button>
+    </div>
+
+    <!-- نموذج إضافة منتج -->
+    <div id="product-form" style="display:none;">
+      <h2>إضافة منتج</h2>
       <label for="product-name">اسم المنتج:</label>
-      <input type="text" id="product-name" required />
+      <input type="text" id="product-name" placeholder="أدخل اسم المنتج" required />
 
       <label for="product-price">سعر المنتج:</label>
-      <input type="number" id="product-price" required />
+      <input type="number" id="product-price" placeholder="أدخل سعر المنتج" required />
 
       <label for="product-description">وصف المنتج:</label>
-      <textarea id="product-description" required></textarea>
+      <textarea id="product-description" placeholder="أدخل وصف المنتج" required></textarea>
 
       <label for="product-image">صورة المنتج:</label>
       <input type="file" id="product-image" accept="image/*" required />
 
-      <button type="submit">إضافة المنتج</button>
-    </form>
+      <button id="product-submit">إضافة المنتج</button>
+    </div>
 
-    <div id="product-display" style="display: none;">
-      <h2>المنتج المضاف</h2>
-      <p><strong>اسم المنتج:</strong> <span id="display-name"></span></p>
-      <p><strong>سعر المنتج:</strong> <span id="display-price"></span></p>
-      <p><strong>وصف المنتج:</strong> <span id="display-description"></span></p>
-      <img id="display-image" src="" alt="صورة المنتج" />
+    <!-- عرض المتجر والمنتج المضاف -->
+    <div id="store-display" style="display: none;">
+      <h2>متجرك</h2>
+      <p><strong>اسم المتجر:</strong> <span id="store-name-display"></span></p>
+      <img id="store-logo-display" alt="شعار المتجر" style="max-width: 100px;" />
+      
+      <h3>منتجاتك</h3>
+      <div id="product-display"></div>
+
+      <h3>للتواصل مع البائع عبر الواتساب</h3>
+      <a id="whatsapp-link" href="#" target="_blank">
+        <button>تواصل عبر الواتساب</button>
+      </a>
     </div>
   </div>
 
