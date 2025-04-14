@@ -153,3 +153,11 @@ input, textarea {
   border-radius: 6px;
   font-size: 15px;
 }
+/* يجعل الصورة تأخذ عرض العنصر الحاوي لها بنسبة 100% وتمنعها من التمدد الزائد */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
