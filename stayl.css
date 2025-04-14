@@ -69,3 +69,87 @@ button:hover {
 body {
   font-family: 'Tajawal', sans-serif;
 }
+/* استيراد خط جذاب من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+/* تنسيق عام للموقع */
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* تنسيق العناوين */
+h1, h2, h3 {
+  color: #444;
+  text-align: center;
+}
+
+/* تنسيق الأزرار */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* كروت المنتجات والمتاجر */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin: 16px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* صور المنتجات */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* تنسيق الحاويات */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* تنسيق النماذج (form) */
+form {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
